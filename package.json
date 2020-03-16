@@ -1,0 +1,32 @@
+{
+  "name": "elm-webpack-start",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "webpack -w & webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://URL/TO/elm-webpack-start.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://URL/TO/elm-webpack-start/issues"
+  },
+  "homepage": "https://URL/TO/elm-webpack-start#readme",
+  "dependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "babel-loader": "^8.0.6",
+    "elm-analyse": "^0.16.5",
+    "elm-format": "^0.8.3",
+    "elm-hot-webpack-loader": "^1.1.6",
+    "elm-webpack-loader": "^6.0.1",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
