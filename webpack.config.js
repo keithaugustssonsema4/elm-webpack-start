@@ -3,7 +3,8 @@ const path = require("path");
 module.exports = {
   mode: "development",
   entry: {
-    app: "./index.js"
+    helloWorld: "./src/helloWorld.js",
+    todo: "./src/todo.js"
   },
   output: {
     path: path.resolve(__dirname, "public/dist"),
@@ -14,7 +15,7 @@ module.exports = {
     rules: [
       {
         test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /(node_modules)/,
         use: {
           loader: "babel-loader",
           options: {
@@ -32,6 +33,19 @@ module.exports = {
             options: {}
           }
         ]
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              implementation: require("sass")
+            }
+          }
+        ]
       }
     ]
   },
@@ -42,7 +56,6 @@ module.exports = {
     historyApiFallback: true,
     hot: true,
     https: false,
-    noInfo: true,
     port: 5000
   },
   context: __dirname,

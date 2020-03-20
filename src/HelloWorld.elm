@@ -1,4 +1,4 @@
-module App exposing (..)
+module HelloWorld exposing (..)
 
 import Browser
 import Html exposing (..)
